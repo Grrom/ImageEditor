@@ -8,7 +8,6 @@ namespace ImageEditor
     {
         void Move(Point point);
         Label Draw(Action remove) { return new Label(); }
-
         int Index { get; }
     }
 }

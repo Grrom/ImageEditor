@@ -14,7 +14,7 @@ namespace ImageEditor
 
         public List<IGraphic> children = new List<IGraphic>();
 
-        public int Index => throw new NotImplementedException();
+        public int Index => 1;
 
         public void AddChild(IGraphic toAdd)
         {
