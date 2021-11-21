@@ -15,19 +15,20 @@ namespace ImageEditor
             children.Add(toAdd);
         }
 
+        public void Move(Point point)
+        {
+            throw new NotImplementedException();
+        }
+
         public void RemoveChild(IGraphic toAdd)
         {
             children.Add(toAdd);
         }
 
-        Label IGraphic.Draw(Point point)
+        public Label Draw(Point point)
         {
             throw new NotImplementedException();
         }
 
-        void IGraphic.Move()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

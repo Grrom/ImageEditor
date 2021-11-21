@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace ImageEditor
 {
-    class Circle
+    class Circle : IGraphic
     {
 
         public static Label Draw(Point point)
@@ -21,6 +21,9 @@ namespace ImageEditor
             return circle;
         }
 
-
+        public void Move(Point point)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

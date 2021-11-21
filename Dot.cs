@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace ImageEditor
 {
-    class Dot
+    class Dot : IGraphic
     {
         public static Label Draw(Point point)
         {
@@ -18,6 +18,11 @@ namespace ImageEditor
                 Size = new Size(50, 50)
             };
             return dot;
+        }
+
+        public void Move(Point point)
+        {
+            throw new NotImplementedException();
         }
     }
 }
