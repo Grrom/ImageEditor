@@ -1,19 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
+using System.Windows.Forms;
 
 namespace ImageEditor
 {
-    class Circle : Graphic
+    class Circle
     {
-        void Graphic.Draw()
+
+        public static Label Draw(Point point)
         {
-            throw new NotImplementedException();
+            Label circle = new Label
+            {
+                Font = new System.Drawing.Font("Arial", 30),
+                Text = "o",
+                Location = point,
+                Size = new Size(50, 50)
+            };
+            return circle;
         }
 
-        void Graphic.Move()
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }

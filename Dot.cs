@@ -1,19 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
+using System.Windows.Forms;
 
 namespace ImageEditor
 {
-    class Dot : Graphic
+    class Dot
     {
-        void Graphic.Draw()
+        public static Label Draw(Point point)
         {
-            throw new NotImplementedException();
-        }
-
-        void Graphic.Move()
-        {
-            throw new NotImplementedException();
+            Label dot = new Label
+            {
+                Font = new System.Drawing.Font("Arial", 15),
+                Text = ".",
+                Location = point,
+                Size = new Size(50, 50)
+            };
+            return dot;
         }
     }
 }

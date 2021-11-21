@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
+using System.Windows.Forms;
 
 namespace ImageEditor
 {
-    interface Graphic
+    interface IGraphic
     {
         public void Move();
-        public void Draw();
+        public Label Draw(Point point) { return new Label(); }
     }
 }
