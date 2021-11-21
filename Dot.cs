@@ -4,17 +4,36 @@ using System.Windows.Forms;
 
 namespace ImageEditor
 {
-    class Dot : IGraphic
+    public class Dot : IGraphic
     {
-        public static Label Draw(Point point)
+
+        public Dot(Point _location, int _index)
+        {
+            Location = _location;
+            Index = _index;
+        }
+
+        public Point Location { get; set; }
+        public int Index { get; set; }
+
+
+        public Label Draw(Action remove)
         {
             Label dot = new Label
             {
                 Font = new Font("Arial", 15),
                 Text = ".",
-                Location = point,
+                Location = Location,
                 Size = new Size(19, 19),
                 TextAlign = ContentAlignment.MiddleCenter,
+            };
+
+            dot.Click += (s, e) =>
+            {
+                if (MessageBox.Show("Remove this dot?", "Confim", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    remove();
+                }
             };
             return dot;
         }

@@ -6,9 +6,15 @@ using System.Windows.Forms;
 
 namespace ImageEditor
 {
-    class CompountGraphic : IGraphic
+    public class CompoundGraphic : IGraphic
     {
+        public CompoundGraphic()
+        {
+        }
+
         public List<IGraphic> children = new List<IGraphic>();
+
+        public int Index => throw new NotImplementedException();
 
         public void AddChild(IGraphic toAdd)
         {
@@ -20,9 +26,9 @@ namespace ImageEditor
             throw new NotImplementedException();
         }
 
-        public void RemoveChild(IGraphic toAdd)
+        public void RemoveChild(int Index)
         {
-            children.Add(toAdd);
+            children.RemoveAt(Index);
         }
 
         public Label Draw(Point point)

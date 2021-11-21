@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ImageEditor
@@ -6,6 +7,8 @@ namespace ImageEditor
     public interface IGraphic
     {
         void Move(Point point);
-        Label Draw(Point point) { return new Label(); }
+        Label Draw(Action remove) { return new Label(); }
+
+        int Index { get; }
     }
 }
