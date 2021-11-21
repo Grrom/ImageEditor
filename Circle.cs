@@ -16,7 +16,7 @@ namespace ImageEditor
                 Font = new System.Drawing.Font("Arial", 30),
                 Text = "o",
                 Location = point,
-                Size = new Size(50, 50)
+                Size = new Size(35, 36)
             };
             return circle;
         }

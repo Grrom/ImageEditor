@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace ImageEditor
@@ -12,10 +10,11 @@ namespace ImageEditor
         {
             Label dot = new Label
             {
-                Font = new System.Drawing.Font("Arial", 15),
+                Font = new Font("Arial", 15),
                 Text = ".",
                 Location = point,
-                Size = new Size(50, 50)
+                Size = new Size(19, 19),
+                TextAlign = ContentAlignment.MiddleCenter,
             };
             return dot;
         }
