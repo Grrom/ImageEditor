@@ -32,6 +32,7 @@ namespace ImageEditor
             this.panel1 = new System.Windows.Forms.Panel();
             this.circleButton = new System.Windows.Forms.Button();
             this.dotButton = new System.Windows.Forms.Button();
+            this.clearButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel1
@@ -63,11 +64,22 @@ namespace ImageEditor
             this.dotButton.UseVisualStyleBackColor = true;
             this.dotButton.Click += new System.EventHandler(this.dotButton_Click);
             // 
+            // clearButton
+            // 
+            this.clearButton.Location = new System.Drawing.Point(360, 415);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(75, 23);
+            this.clearButton.TabIndex = 3;
+            this.clearButton.Text = "Clear";
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.clearButton);
             this.Controls.Add(this.dotButton);
             this.Controls.Add(this.circleButton);
             this.Controls.Add(this.panel1);
@@ -82,6 +94,7 @@ namespace ImageEditor
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button circleButton;
         private System.Windows.Forms.Button dotButton;
+        private System.Windows.Forms.Button clearButton;
     }
 }
 

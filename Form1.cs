@@ -45,5 +45,9 @@ namespace ImageEditor
             }
         }
 
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+        }
     }
 }
